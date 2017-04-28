@@ -15,10 +15,12 @@
           <%= link_to "Book Review", root_url, class:"navbar-brand" %>            
         </div>
         <ul class="nav navbar-nav">
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          
           <% if user_signed_in? %>
+            <li><a href="/users/edit"><span class="text-primary">Signed in as:</span> <%= current_user.email %></a></li>
             <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
           <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
             <li><%= link_to "Sign In", new_user_session_path %></li>  
           <% end %>  
         </ul> 
@@ -45,10 +47,10 @@
       </div>       
     </nav>
 
-    <div class="container-fluid">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
+    <div class="container">  
       <%= yield %>
     </div>
 
