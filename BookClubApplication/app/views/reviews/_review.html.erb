@@ -1,7 +1,7 @@
-<p class="text-primary" style="text-transform: uppercase;"><%= review.user.email %></p>
+<p class="text-primary"><strong><%= review.user.first_name %> <%= review.user.last_name %></strong></p>
 <div class='review-rating' data-score='<%= review.rating %>'></div>
 <p><%= review.comment %></p>
-<p class="text-info"><%= time_ago_in_words(review.created_at) %> Ago </p>
+<p style="opacity: 0.5;"><%= time_ago_in_words(review.created_at) %> Ago </p>
 
 <% if user_signed_in? %>
   <% if review.user_id == current_user.id %> 

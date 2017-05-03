@@ -11,11 +11,6 @@
   <body>
   <%= render 'layouts/navbar' %>
 
-      <!-- <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p> -->
-
-
-
     <div class="container padding">
     <!-- Notifications -->
       <% if notice %> 
@@ -24,7 +19,7 @@
           <strong><span class="notice"><%= notice %></span></strong> 
         </div> 
       <% elsif alert %>
-        <div class="alert alert-info alert-dismissable text-center col-xs-8 col-xs-offset-2">
+        <div class="alert alert-danger alert-dismissable text-center col-xs-8 col-xs-offset-2">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
           <strong><span class="alert"><%= alert %></span></strong>
         </div>

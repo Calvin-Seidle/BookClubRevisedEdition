@@ -10,11 +10,13 @@
 		<% end %>
 	</div>
 	<div class="col-md-8 book-info">
-		<h2><%= @book.title %></h2>
-		<h3>Author: <%= @book.author %></h3>
-		<h4>Average Rating</h4>
-		<div class="average-review-rating" data-score=<%= @average_review %>></div>
-		<span style="opacity: 0.5;">Based on <%= @book.reviews.count %> reviews</span><br><br>
+	  <div class="row"><center>
+		<h2 class="col-md-6 col-md-offset-3"><%= @book.title %></h2>
+		<h3 class="col-md-6 col-md-offset-3">Author: <%= @book.author %></h3>
+		<h4 class="col-md-6 col-md-offset-3">Average Rating</h4>
+		<div class="average-review-rating col-md-6 col-md-offset-3" data-score=<%= @average_review %>></div>
+		<span class="col-md-6 col-md-offset-3" style="opacity: 0.5;">Based on <%= @book.reviews.count %> reviews</span><br><br></center>
+	  </div>	
 		<blockquote class="justify"><%= @book.description %></blockquote><hr>
 		<p><%= render @book.reviews %></p>
 		<%= render "reviews/form" %>

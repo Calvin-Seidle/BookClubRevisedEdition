@@ -1,0 +1,19 @@
+<div class="panel panel-info">
+
+	<div class="panel-heading text-center">
+		<h1><%= @user.first_name %> <%= @user.last_name %> </h1>
+	</div>
+	<div class="panel-body">
+		<div class="row container">
+			<p><span class="text-info">Date of Birth:</span> <%= @user.birthday %></p>
+			<p><span class="text-info">Email:</span> <%= @user.email %></p>
+			<p><span class="text-info">Username:</span> <%= @user.username %></p>
+			<p><span class="text-info">About Me:</span> <%= @user.about %></p>
+			<p><span class="text-info">Date Signed Up:</span> <%= @user.created_at %></p>
+			<p><span class="text-info">Number of Times Logged In:</span> <%= @user.sign_in_count %></p>
+			
+		</div>	
+	</div>
+
+
+</div>
