@@ -5,13 +5,21 @@
 	</div>
 	<div class="panel-body">
 		<div class="row container">
-			<p><span class="text-info">Date of Birth:</span> <%= @user.birthday %></p>
-			<p><span class="text-info">Email:</span> <%= @user.email %></p>
-			<p><span class="text-info">Username:</span> <%= @user.username %></p>
-			<p><span class="text-info">About Me:</span> <%= @user.about %></p>
-			<p><span class="text-info">Date Signed Up:</span> <%= @user.created_at %></p>
-			<p><span class="text-info">Number of Times Logged In:</span> <%= @user.sign_in_count %></p>
-			
+		  <div class="col-md-4">
+		  	<% if user_signed_in? %>
+		  	<p><%= image_tag @user.avatar.url(:profile_pic), class:"profile_pic" %></p>
+		  	<% else %>
+		  	<p><img src="/default2.png"></p>
+		  	<% end %>
+		  </div>	
+		  <div class="col-md-8">
+			<h4><span class="text-info">Date of Birth:</span> <%= @user.birthday %></h4><br>
+			<h4><span class="text-info">Email:</span> <%= @user.email %></h4><br>
+			<h4><span class="text-info">Username:</span> <%= @user.username %></h4><br>
+			<h4><span class="text-info">About Me:</span> <%= @user.about %></h4><br>
+			<h4><span class="text-info">Date Signed Up:</span> <%= @user.created_at %></h4><br>
+			<h4><span class="text-info">Number of Times Logged In:</span> <%= @user.sign_in_count %></h4><br>
+		  </div>	
 		</div>	
 	</div>
 

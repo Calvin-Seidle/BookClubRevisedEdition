@@ -59,6 +59,17 @@
     text-justify: inter-word
 }
 
+.thumb {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+
+.profile_pic {
+	border-radius: 25px;
+	@include background-tile;
+}
+
 .book-info {
 	@include background-tile;
 }
