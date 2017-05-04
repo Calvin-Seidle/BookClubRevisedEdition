@@ -37,6 +37,10 @@
 	width: 325px;
 	@include background-tile;
 }
+.book-timeline {
+	height: 250px;
+	width: 150px;
+}
 
 .reviews {
 	width: 325px;
@@ -79,6 +83,11 @@
 
 .alert {
 	box-shadow: 3px 3px 5px 6px #ccc;	
+}
+
+h1 {
+	font-size: 50px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .show-page-padding {

@@ -7,6 +7,8 @@
           
           <% if user_signed_in? %>
             <li><a href="/users/<%= current_user.id %>"><span class="text-primary">Signed in as:</span> <%= current_user.first_name %> <%= current_user.last_name %></a></li>
+            <!-- <li><%= link_to 'See All Books', books_path %></li> -->
+            <li<% if current_page?(timeline_index_path) %> class="active" <% end %>><%= link_to 'Timeline', timeline_index_path %></li>
           <% else %>
             <li><%= link_to '<i class="glyphicon glyphicon-pencil"></i> Sign Up'.html_safe, new_user_registration_path %> </li>
             <li><%= link_to '<i class="glyphicon glyphicon-log-in"></i> Login'.html_safe, new_user_session_path %> </li>  

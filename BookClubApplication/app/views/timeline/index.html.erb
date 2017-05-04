@@ -1,0 +1,17 @@
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h1 class="text-center text-primary">Timeline</h1>
+	</div>
+
+	<div class="panel-body">
+		<% @books.each do |book| %>
+		  <div class="row">
+			<div class="col-md-4">
+				<%= image_tag book.book_img.url(:book_index), class:"book" %>
+			</div>
+		  </div>
+		<div class="row show-page-padding"></div>
+		<% end %>	
+	</div> 
+</div>
+
