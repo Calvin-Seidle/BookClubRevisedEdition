@@ -9,6 +9,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'paperclip', '~> 5.1'
+# gem 'avatars_for_rails'
 
 gem 'rails', '~> 5.0.2'
 gem 'sqlite3'
